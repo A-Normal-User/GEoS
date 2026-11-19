@@ -18,6 +18,9 @@
     *  `Database.zip`是在我们训练集GEoS使用的训练集，由于文件较大，无法直接上传，解压后包含了`database_new_max.pt`和`database_new_max_val.pt`文件。不过，训练集的构建代码我们也已经完整提供，也可根据`build.ipynb`自行构建训练集。
     *  运行`build.ipynb`将会得到`database_new_max.pt`和`database_new_max_val.pt`文件。其中`database_new_max.pt`是最终的训练集，`database_new_max_val.pt`是最终的验证集（实际训练中抽取了其一半的数据放入了训练集中）。
 *   `Test`文件夹中包含了测试集的计算结果。
+    *  `model.py`是模型结构的代码。
+    *  `PC-SAFT(Fit).ipynb`是根据GEoS拟合得到的PC-SAFT参数进行计算的代码。
+    *  `GEoS.ipynb`是根据GEoS计算测试集密度的代码，由于完整版本的`TestSet.csv`中含有DIPPR 801数据库的临界点信息，涉及许可证的限制，本代码库中临界温度和临界压力信息未包含在内；若有复现需求请在拥有DIPPR 801数据库访问权限的情况下补全`TestSet.csv`缺失的临界点信息后，便可完整地运行`GEoS.ipynb`中的代码。
     *  `pcsaft_regression_results.csv`包含了拟合的PC-SAFT参数。
 *   `Training`文件夹中包含了模型训练的代码。
     *  `train.py`是训练代码。

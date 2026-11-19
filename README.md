@@ -17,6 +17,9 @@
     *   `build.ipynb` is the script for constructing the training set.
     *   Running `build.ipynb` generates the `database_new_max.pt` and `database_new_max_val.pt` files, which serve as the final training set and validation set, respectively (note that half of the validation set is incorporated into the training set during actual training).
 *   The `Test` directory contains the calculation results on the test set.
+    * `model.py` contains the code for the model architecture.
+    * `PC-SAFT(Fit).ipynb` contains the code for calculations using PC-SAFT parameters fitted from GEoS.
+    * `GEoS.ipynb` contains the code for calculating the density of the test set via GEoS. Because the complete version of `TestSet.csv` includes critical point data from the DIPPR 801 database, critical temperature and critical pressure are excluded from this repository due to license restrictions. To reproduce the results, users with access to the DIPPR 801 database should supplement the missing critical point data in `TestSet.csv` to fully execute `GEoS.ipynb`.
     *   `pcsaft_regression_results.csv` contains the fitted PC-SAFT parameters.
 *   The `Training` directory contains the code for model training.
     *   `train.py` is the script for model training.
